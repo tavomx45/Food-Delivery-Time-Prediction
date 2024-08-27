@@ -2,7 +2,7 @@ from src.constants.constants import *
 import os, sys
 
 
-ROOT_DIR = ROOt_DIR_KEY
+ROOT_DIR = ROOT_DIR_KEY
 
 # Dataset_url = 
 
@@ -24,9 +24,9 @@ TEST_FILE_PATH = os.path.join(ROOT_DIR, ARTIFACT_DIR_KEY, DATA_INGESTIOn_KEY, CU
 
 
 PREPROCESING_OBJ_FILE = os.path.join(ROOT_DIR, ARTIFACT_DIR_KEY, DATA_TRANSFORMATION_ARTIFACT, 
-                                     DATA_PREPROCCED_DIR, DATA_TRANSFORMTION_PROCESSING_OBJ)
+                                     DATA_PREPROCESSED_DIR, DATA_TRANSFORMTION_PROCESSING_OBJ)
 
-TRANSFORM_TRAIn_FILE_PATH = os.path.join(ROOT_DIR, ARTIFACT_DIR_KEY, DATA_TRANSFORMATION_ARTIFACT,
+TRANSFORM_TRAIN_FILE_PATH = os.path.join(ROOT_DIR, ARTIFACT_DIR_KEY, DATA_TRANSFORMATION_ARTIFACT,
                                          DATA_TRANSFORM_DIR, TRANSFORM_TRAIN_DIR_KEY)
 
 
@@ -36,4 +36,7 @@ TRANSFORM_TEST_FILE_PATH = os.path.join(ROOT_DIR, ARTIFACT_DIR_KEY, DATA_TRANSFO
 
 
 FEATURE_ENGG_OBJ_FILE_PATH = os.path.join(ROOT_DIR, ARTIFACT_DIR_KEY, DATA_TRANSFORMATION_ARTIFACT,
-                                          DATA_PREPROCCED_DIR,' feature_engg.pkl')
+                                          DATA_PREPROCESSED_DIR,' feature_engg.pkl')
+#Model training
+
+MODEL_FILE_PATH = os.path.join(ROOT_DIR, MODEL_TRAINER_KEY, MODEL_OBJECT)
