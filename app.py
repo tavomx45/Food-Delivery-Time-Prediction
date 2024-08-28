@@ -10,6 +10,8 @@ from src.pipeline.prediction_pipeline import PredictionPipeline, CustomData
 from src.pipeline.training_pipeline import TrainingPipeline
 from flask import Flask, render_template, request
 from werkzeug.utils import secure_filename
+from Prediction.batch import *
+
 
 feature_engineering_file_path = FEATURE_ENGG_OBJ_FILE_PATH 
 transformer_file_path = PREPROCESING_OBJ_FILE
@@ -81,7 +83,7 @@ def batch_prediction():
             batch = batch_prediction(file_path, model_file_path, transformer_file_path, feature_engineering_file_path)
             batch.start_batch_prediction()
 
-            output = "bat prediction done"
+            output = "batch prediction done"
 
             return render_template('batch.html', prediction_result = output, prediction_type='batch')
         
