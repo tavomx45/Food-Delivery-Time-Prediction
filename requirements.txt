@@ -8,4 +8,5 @@ plotly
 nbformat
 scikit-learn
 xgboost
+flask
 -e .

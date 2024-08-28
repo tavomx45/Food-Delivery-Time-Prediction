@@ -4,6 +4,7 @@ import os, sys
 import pickle
 from sklearn.metrics import r2_score
 
+
 def sav_obj(file_path, obj):
     try:
         dir_path = os.path.dirname(file_path)
@@ -15,6 +16,7 @@ def sav_obj(file_path, obj):
         logging.info(f"Object saved at {file_path}")
     except Exception as e:
         raise CustomException(e, sys)
+
 
 def evaluate_model(X_train, y_train, X_test, y_test, models):
     try:
@@ -32,3 +34,13 @@ def evaluate_model(X_train, y_train, X_test, y_test, models):
     
     except Exception as e:
         raise CustomException(e, sys)
+    
+
+def load_model(file_path):
+    try:
+        with open(file_path, 'rb') as f:
+            return pickle.load(f)
+        
+    except Exception as e:
+        logging.info(f"Error in loading the model: {e}")
+        raise CustomException(e, sys)   
